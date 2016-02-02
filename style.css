@@ -1,0 +1,68 @@
+/**
+ * Style for every page
+ */
+.page {
+	bottom: 0;
+	padding-top: 200px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+}
+
+.page h1 { font-size: 80px; }
+.page a { margin-top: 50px; }
+
+/**
+ * PAGES (specific background images for each page)
+ */
+
+.page-home { background: #234567; color: #ffffff; }
+.page-articles { background: #91a2b3; color: #ffffff; }
+.page-gallery { background: #000000; color: #d3d9e0; }
+
+.btn { margin-right: 10px; }
+
+/**
+ * ANIMATIONS
+ */
+
+/* Exit animations */
+@keyframes slideOutLeft {
+	to { transform: translateX(-100%); }
+}
+
+@keyframes slideDown {
+	from { transform: translateY(0); }
+	to { transform: translateY(100%); }
+}
+
+/* Enter animations */
+@keyframes slideInRight {
+	from { transform: translateX(100%); }
+	to { transform: translateX(0); }
+}
+
+@keyframes slideUp {
+	from { transform: translateY(100%); }
+	to { transform: translateY(0); }
+}
+
+@keyframes rotateOutNewspaper {
+	to { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+
+
+.ng-enter { z-index: 8888; }
+.ng-leave { z-index: 9999; }
+
+
+
+.page-home.ng-enter { animation: slideInRight 0.5s both ease-in; }
+.page-home.ng-leave { animation: slideDown 0.5s both ease-in; }
+
+.page-articles.ng-enter { animation: slideUp 0.5s both ease-in; }
+.page-articles.ng-leave { animation: slideOutLeft 0.5s both ease-in; }
+
+.page-gallery.ng-enter { transform-origin: 50% 50%; animation: rotateOutNewspaper 1s both ease-in; }
+.page-gallery.ng-leave { animation: slideOutLeft 0.5s both ease-in; }
