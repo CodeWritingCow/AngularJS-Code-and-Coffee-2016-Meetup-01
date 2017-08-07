@@ -1,5 +1,5 @@
 ## Sample AngularJS app with CSS animations
-This is a single-page AngularJS app that I made for my first meetup with the [Bloomsburg Coffee and Code](http://www.meetup.com/Bloomsburg-Coffee-and-Code/) group.
+This is a single-page AngularJS website that I made for my first meetup with the [Bloomsburg Coffee and Code](http://www.meetup.com/Bloomsburg-Coffee-and-Code/) group.
 
 I animated transitions from one page to another by using `ngAnimate` and CSS animations.
 
